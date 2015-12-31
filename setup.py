@@ -10,7 +10,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 setup(
     name='django-easy-network-stats',
     version='0.1',
-    packages=['easy_network_stats'],
+    packages=['django_easy_network_stats'],
     include_package_data=True,
     license='GPLv3 License',  # example license
     description='A Django app enhance django_netjsongraph with some stats.',

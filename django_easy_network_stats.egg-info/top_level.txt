@@ -1,1 +1,1 @@
-easy_network_stats
+django_easy_network_stats

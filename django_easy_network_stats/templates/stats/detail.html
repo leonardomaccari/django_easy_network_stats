@@ -1,0 +1,36 @@
+{% extends 'stats/base.html' %}
+{% block title %}{{ topology.label }}{% endblock %}
+{% block body %}
+    <div id="legend">
+        <p><span class="link up">&nbsp;</span> link up</p>
+        <p><span class="link down">&nbsp;</span> link down</p>
+    </div>
+    <div id="selectforms">
+    <form>
+     <select name='link_stats'>
+      {% for l in links %}
+      <option value="{{l}}">{{l}}</option>
+      {% endfor %}
+    </select> 
+    <input type="submit" value="Chose Link">
+    </form>
+    </div>
+{% endblock %}
+{% block script %}
+    {{ block.super }}
+    <script>
+        var graph = d3.netJsonGraph("{% url 'network_graph' topology.pk %}", {
+            linkClassProperty: "status",
+            defaultStyle: false,
+            labelDy: "-1.5em",
+            circleRadius: 7,
+            charge: -300,
+            gravity: 0.1,
+            linkDistance: 70,
+            linkStrength: 0.1,
+        });
+    </script>
+{% if chart %}}
+    <div id='graph'> {{ chart.as_html }} </div>
+{% endif %}
+{% endblock %}
