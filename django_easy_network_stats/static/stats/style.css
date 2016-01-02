@@ -1,0 +1,94 @@
+#graph{
+    position: absolute;
+    top: 80%;
+    bottom: 1px;
+    width: 500px;
+    height: 150px;
+    right: 30%;
+    left: 30%;
+    padding: 0 15px;
+    background: #fbfbfb;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+/* selectforms */
+#selectforms{
+    position: absolute;
+    top: auto;
+    right: 5px;
+    bottom: 5px;
+    width: auto;
+    height: auto;
+    max-width: 550px;
+    padding: 0 15px;
+    background: #fbfbfb;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+#selectforms p{ line-height: 16px; margin: 10px 0 }
+#selectforms span{
+    width: 16px;
+    margin-right: 5px;
+}
+#selectforms span.link{
+    display: inline-block;
+    height: 5px;
+    border-bottom-width: 6px;
+    border-bottom-style: solid;
+}
+#selectforms .up{ border-color: #3acc38 }
+#selectforms .down{ border-color: red }
+
+#selectforms .ul {
+    padding: 0;
+    margin: 0;
+}
+
+#selectforms li {
+    position: relative;
+    float: left;
+    width: 140px;
+    text-align: center;
+    list-style: none;
+}
+
+#selectforms li a {
+    background-color: #454545;
+    color: #FFF;
+    padding: 15px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+#selectforms li a:hover {
+    background-color: #4d4d4d;
+    text-shadow: 0px 0px 1px #FFF;
+}
+
+#selectforms ul ul {
+    position: absolute;
+    top: 48px;
+    visibility: hidden;
+}
+
+#selectforms ul li:hover ul {
+    visibility: visible;
+}
+
+#selectforms ul ul:hover {
+    box-shadow: 0px 20px 30px #7C7C7C;
+}
+
+#selectforms ul ul li a {
+    background-color: #3A3A3A;
+}
+
+#selectforms ul ul li a:hover {
+    background-color: #3F3F3F;
+}
