@@ -4,7 +4,6 @@ from graphos.sources.simple import SimpleDataSource
 from graphos.renderers.flot import LineChart
 from collections import defaultdict
 import networkx as nx
-# Create your views here.
 
 
 def index(request):
@@ -47,7 +46,8 @@ def topology_detail(request, pk):
             g = nx.Graph()
             for l in links:
                 if l.update == u:
-                    g.add_edge(str(l.source), str(l.target), {'cost': float(l.cost)})
+                    g.add_edge(str(l.source), str(l.target),
+                               {'cost': float(l.cost)})
             cost = nx.dijkstra_path_length(g, str(path_stats_source),
                                            str(path_stats_target),
                                            weight='cost')

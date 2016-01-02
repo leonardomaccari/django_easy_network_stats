@@ -14,6 +14,23 @@
     </select> 
     <input type="submit" value="Chose Link">
     </form>
+
+    <form>
+    Source
+     <select name='path_stats_source'>
+      {% for n in nodes %}
+      <option value="{{n}}">{{n}}</option>
+      {% endfor %}
+    </select> 
+    Target
+     <select name='path_stats_target'>
+      {% for n in nodes %}
+      <option value="{{n}}">{{n}}</option>
+      {% endfor %}
+    </select> 
+    <input type="submit" value="Chose path">
+    </form>
+
     </div>
 {% endblock %}
 {% block script %}
@@ -31,6 +48,8 @@
         });
     </script>
 {% if chart %}}
-    <div id='graph'> {{ chart.as_html }} </div>
+    <div id='graph'> 
+        <a href="graph.html?graph={{ chart }}">{{ chart.as_html }}</a>
+    </div>
 {% endif %}
 {% endblock %}
